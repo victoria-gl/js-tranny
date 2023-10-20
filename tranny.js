@@ -162,4 +162,292 @@
 
         //  Урок 2.1
 
-        
+
+
+         // Перевірка масивів
+// console.log(typeof array)
+// console.log(Array.isArray(array))
+// console.log(Array.isArray("hello"))
+
+      // Перший та останній елемент масиву
+
+// const firstElement = array[0];
+// const lastIdx = array.length - 1;
+// const lastEl = array[lastIdx];
+// console.log(lastEl)
+
+// const array = ["Hello", 3, null, true, 5];
+
+        // Перебір циклу
+
+        //  Цикл for (використовується частіше)
+
+// for (let i = 0; i < array.length; i += 1){
+//         const item = array[i]
+//         // console.log(item);
+//         console.log(`index: ${i}. item: ${array[i]}`);
+// }
+
+        //  Цикл for of
+
+// for (const item of array) {
+//         console.log(item)
+// }
+
+        //  Присвоєння за посилання та за значенням
+        // Примітивні типи данних - за значенням
+
+// console.log("apple" === "apple");
+
+// let a = 15;
+// let b = a;
+
+// b += 1;
+
+// console.log(a);
+// console.log(b);
+// console.log(a === b);
+
+
+        //    Складні типи данних за посиланням
+
+
+// let a = [1, 2, 3]; 
+// let b = a;
+
+// b.push(4);
+
+// console.log("a", a);
+// console.log("b", b);
+// console.log(a === b);
+// console.log([1, 2, 3, 4] === [1, 2, 3, 4]);
+
+// пояснення: (b створює посилання на а і тоді редагує масив, який є в а)
+
+
+        //      Методи для роботи з масивами
+
+//       push/pop
+
+// const numbers = [1, 2, 3];
+// numbers.push("hello", "world");
+// console.log(numbers);
+
+// const result = numbers.pop();
+// console.log("result", result);
+// console.log("numbers", numbers);
+
+        //  shift/unshift
+  
+// const numbers = [1, 2, 3];
+// numbers.unshift(4, 5, 6);
+// console.log(numbers);
+
+// const result = numbers.shift();
+// console.log( "result", result);
+// console.log("numbers", numbers);
+ 
+        //      slice
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const result = numbers.slice(2);
+// console.log(result);
+// console.log(numbers);
+
+
+        //     splice - різниця в тому, що він мутує початковий масив
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const result = numbers.splice(2, 2);
+// console.log(result);
+// console.log(numbers);
+
+// можна замінити щось
+// numbers.splice(2, 1, "Hello world");
+// console.log("after replace", numbers);
+
+// можна додати щось
+
+// numbers.splice(2, 0, "Hello world")  ;
+// console.log("after add", numbers);
+
+
+        //   includes
+
+// const str = ["a", "b", "c", "d"];
+
+// console.log(str.includes("r"));
+// console.log(str.includes("a"));
+
+
+        //  indexOf
+
+// const str = ["a", "b", "c", "d"];
+// console.log(str.indexOf("a"));
+// console.log(str.indexOf("e"));
+
+        //   concat
+
+// const str = ["a", "b", "c", "d"];
+// const strA = ["e", "f"];
+// const strB = ["g", "h"];
+
+// const resultA = str.concat(strA, strB);
+// console.log(resultA);
+
+// const resultB = str.concat(strB, strA)
+// console.log(resultB)
+
+
+// Задача 1
+// Напишіть скрипт, який буде перебирати масив 
+// та видаляти з нього(мутувати)
+// всі елемпенти не є типом даних Number
+
+// const arr = [3, "Hello", null, 42, false];
+
+// варіант 1 - перебір з початку
+// for (let i = 0; i < arr.length; i++){
+//         if (typeof arr[i] !== "number") {
+//                 arr.splice(i, 1);
+//                 i -= 1; 
+//         }
+// }
+
+// варіант 2 - перебір з кінця
+// for (let i = arr.length - 1; i >= 0; i -= 1){
+//         if (typeof arr[i] !== "number") {
+//               arr.splice(i, 1)
+//       }
+// }
+
+// важливо додавати i -= 1, щоб 
+// не пропускати елементи при перевірці
+
+// console.log(typeof (null));
+// console.log(arr);
+
+// Задача 2 
+
+// Потрібно створити функцію, яка буде приймати 1 параметр
+// Функція повинна відбирати з масиву тільки ті елементи, що дублюються
+// в ньому та повернути їх у вигляді нового масиву як результат
+// функції
+
+// function getCommonElements(arr) {
+//         const result = []
+//         for(let i = 0; i < arr.length; i++) {
+//                 if (arr.includes(arr[i], i+1)) {
+//                     result.push(arr[i])
+//                 }
+//         }
+//         return result
+// }
+
+// console.log(getCommonElements([1, 2, 3, 2, 1, 17, 17]));
+
+
+// function getCommonElements(arr) {
+//         const uniq = []
+//         const repeat = []
+
+//         for (const item of arr) {
+//                 if (!uniq.includes(item)) {
+//                         uniq.push(item)
+//                 } else {
+//                         repeat.push(item)
+//                 }
+//         }
+//         return repeat
+// }
+
+// console.log(getCommonElements([1, 2, 3, 2, 1, 17, 17]));
+
+// Задача 3 
+
+// Потрібно створити функцію, що буде приймати 2 параметри
+// 1 пар це мас всіх юзерів
+// 2 пар це масив з чол іменами
+
+// Функція повинна відібрати з масиву всіх юзерів з жін іменами 
+// та повернути їх в результаті
+
+// const users = ["Artem", "Alina", "Roman", "Victoria"];
+// const men = ["Artem", "Roman"];
+
+// function getWoman(users, men) {
+//         const woman = []
+
+//         for (const user of users) {
+//         //  console.log(user);
+//                 if (!men.includes(user)) {
+//                         woman.push(user)
+//                 }
+//         }
+//      return woman
+// }
+
+// console.log(getWoman(users, men))
+
+
+// Завдання 4 - Масиви та рядки
+
+// Напиши скрипт, який розгорне рядок 
+// (зворотний порядок літер)
+// і виводить його в консоль
+
+// const string = "Welcome to the future";
+// const result = string.split("").reverse().join("");
+// console.log(result)
+
+
+// Завдання 5
+
+// Напиши скрипт, який буде перевіряти чи елементи в масиві
+// розташовані в порядку зростання,
+// якщо ні, то замінювати елементи на вірні    
+
+// const numbers = [1, 2, 3, 1, 5, 6, 1, 7, 1, 10];
+
+// numbers.sort(function (a, b) {
+//         return a - b
+// })
+
+// numbers.sort((a, b) => a-b)
+
+// console.log(numbers);
+
+// Завдання 6
+
+// Напиши функцію, яка на основі масиву користувачів що
+// поставили лайк формує та повертає рядок
+// Функція має повернути текст:
+
+// [] - "no one"
+// ["Peter"] - "Peter likes this"
+//[Jacob, Alex] - "Jacob and Alex like this"
+// [Jacob, Alex, Mark] - Jacob, Alex, and like this
+// [Jacob, Alex, Mark, Max] - Jacob and 2 others like this
+
+// function createStr(arr) {
+//         let message;
+//         switch(arr.length) {
+//                 case 0:
+//                         message = "no one";
+//                         break;
+//                 case 1:
+//                         message = `${arr[0]} likes this`;
+//                         break;
+//                 case 2:
+//                         message = `${arr[0]} and ${arr[1]} like this`;
+//                         break;
+//                 case 3:
+//                         message = `${arr[0]}, ${arr[1]} and ${arr[2]} like this`;
+//                         break;
+//                 default:
+//                         message = `${arr[0]}, ${arr[1]} and ${arr.length - 2} others like this`
+//         }
+//         return message
+// }
+
+// console.log(createStr(["Jacob", "Alex", "Mark", "Max", "Victoria"]));
