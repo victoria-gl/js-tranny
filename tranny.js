@@ -590,3 +590,143 @@
 // console.log(someArray);
 
 
+// Завдання 1
+// Створи ф - цію, яка буде перевіряти чи кожен елемент
+// масиву більше, ніж вказане значення
+// Функція приймає 2 параметри 
+// 1 - Масив чисел
+// 2 - Число, яке потрібно порібнювати з усіма елементами масиву
+
+// Функція повертає повідомлення про успішну або не успішну перевірку
+
+// const numbers = [25, 12, 67, 40, 18];
+
+// коли ств ф-цію - в дужках параметри
+// function checkValue(arr, target) { 
+//         let message = "Success";
+//         for (const number of arr) {
+//                 console.log(number);
+//                 if (target > number) {
+//                         message = "Fail";
+//          }
+//         }
+//         return message;
+// }
+
+// коли викл ф-цію - в дужках аргументи
+// console.log(checkValue(numbers, 10))
+// console.log(checkValue(numbers, 13))
+
+// Застосування ф-ції + патерн раннє повернення 
+// const numbers = [25, 12, 67, 40, 18];
+
+// function checkValue(arr, target) {
+//         for (const item of arr) {
+//                 console.log(item)
+//                 if (target > item) {
+//                         return "Fail"
+//                 }
+//         }
+// return "Success"
+// }
+
+// console.log(checkValue(numbers, 10))
+// console.log(checkValue(numbers, 13))
+
+
+
+// Завдання 2
+// Ств ф - цію, яка буде розбивати початковий масив
+// на потрібну к - сть елементів розділяючи на декілька 
+// масивів.Ф - ція приймає 2 параметри:
+// 1 - масив значень 
+// 2 - потрібну к - сть елементів в масиві
+// Функція повертає масив масивів
+
+// const data = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// function getCombination(arr, count) {
+//         const res = [];
+//         for (let i = 0; i < arr.length; i+= count) {
+//                 const comb = arr.slice(i, i + count);
+//                 res.push(comb)
+//         }
+//         return res
+// }
+
+// console.log(getCombination(data, 2));
+// console.log(getCombination(data, 3));
+
+
+
+// Завдання 3
+// Ств ф - цію, яка буде обчислювати площу прямокутника 
+// зі сторонами, значення яких будуть передані до параметрів 
+// dimensions у вигляді рядка.
+// значення гарантовано розділені пробілом
+
+// function getRectArea(dimensions) {
+//         // console.log(dimensions)
+//         const arr = dimensions.split(" ");
+//         // console.log(arr);
+//         const firstValue = Number(arr[0]);
+//         const secondValue = +arr[1];
+//         // console.log(typeof secondValue);
+
+//         return firstValue * secondValue;
+// }
+
+// console.log(getRectArea("8 11"))
+
+
+
+// Завдання 4
+// Напишіть ф - цію для роботи з колекцією навчальних
+// курсів courses
+// addCourse(name) - додає курс до кінця колекції
+// removeCourse(name) - видаляє курс з колекції
+// updateCourse(oldName, newName) - замінює імя на нове
+
+const courses = ["HTML", "CSS", "JavaScript", "React"]
+
+// function addCourse(name) {
+//         if (courses.includes(name)) {
+//                 return "Курс вже є"
+//         }
+//         courses.push(name)
+// }
+
+// addCourse("Express")
+// console.log(courses)
+// console.log(addCourse("CSS"));
+
+// function removeCourse(name) {
+//         const idx = courses.indexOf(name)
+
+//         if (idx === -1) {
+//                 return "Курсу немає"
+//         }
+//         courses.splice(idx, 1)
+// }
+
+// removeCourse("CSS")
+// console.log(courses)
+// console.log(removeCourse("Vue"));
+
+// function updateCourse(oldName, newName) {
+//         const idx = courses.indexOf(oldName)
+
+//         if (idx !== -1) {
+//                 courses[idx] = newName;
+//                 return
+//         }
+// return "Вже є "
+// }
+
+// updateCourse("HTML", "NodeJs")
+// console.log(courses)
+// console.log(updateCourse("efjw", "Vue"));
+
+
+
+
