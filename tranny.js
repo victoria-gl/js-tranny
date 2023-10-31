@@ -452,3 +452,141 @@
 
 // console.log(createStr(["Jacob", "Alex", "Mark", "Max", "Victoria"]));
 
+
+
+// Урок 2.2
+
+// function foo(a, b) {
+//         return a + b
+// }
+
+// console.log(foo(1, 3))
+// console.log(foo(3, 15))
+
+ 
+       // 2 способи оголошення функції:
+// 1) function declaration
+
+// foo()
+// function foo() {
+//         console.log("Hello")
+// }
+
+
+// 2) function expression
+
+// const foo = function (val1, val2) {
+//         return val1 + val2
+// }
+
+// console.log(foo(1, 2)); (не можемо викликати до створення функції)
+
+
+
+
+// Псевдомасив arguments
+
+// такий самий масив, але без його методів(має зокрема індексацію)
+
+// function getSum() {
+//         let sum = 0;
+//         // console.log(arguments.length);
+//         // for (const item of arguments) {
+//         //         console.log(item);
+//         // }
+//         const arr = Array.from(arguments)
+//         // console.log(Array.isArray(arr));
+
+//         for (const item of arr) {
+//                 sum += item
+//         }
+
+//      return sum
+// }
+
+// const result = getSum(2, 3, 4, 5, 6)
+// console.log(result);
+
+// Області видимості, присвоєння за значенням і за посиланням
+
+
+// Example 1
+// let value = 11;
+
+// if (true) {
+//     value = 4;
+// }
+
+// console.log(value);
+
+
+// Example 2
+// let value = 11;
+// if (true) {
+//         let value = 4;
+// }
+ 
+// console.log(value);
+
+
+// Example 3
+// let someValue = 4;
+
+// if (true) {
+
+//         if (true) {
+//                 someValue = 24;
+//         }
+//         // console.log("block", someValue)
+//          someValue = 11;
+// }
+
+// console.log(someValue);
+
+
+// Example 4
+// let someValue = 2;
+
+// function checkScope(someValue) {
+//         someValue = 45;
+//         return someValue;
+// }
+
+// console.log(checkScope(someValue));
+
+// console.log(someValue);
+
+// Example 5
+
+// let someValue = 2;
+
+// function checkScope() {
+//         someValue = 45;
+//         return someValue;
+// }
+
+// checkScope(someValue)
+// console.log(someValue);
+
+// Example 6
+
+// let someArray = ["Hello", "my", "name", "scope"];
+
+// function checkScope(arr) {
+//         arr.splice(0, 3);
+// }
+
+// checkScope(someArray)
+// console.log(someArray);
+
+// let someArray = ["Hello", "my", "name", "scope"];
+
+// function checkScope(arr) {
+//         arr = Array.from(arr);
+//         arr.splice(0, 3);
+// }
+
+// checkScope(someArray)
+// console.log(someArray);
+
+
