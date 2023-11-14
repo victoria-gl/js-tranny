@@ -1131,3 +1131,106 @@
 
 
                 
+
+                // Урок 6.1
+
+// const link = document.querySelector(".link");
+
+
+// link.classList.add("special");
+
+// link.classList.replace("special", "regular");
+
+// console.log(link);
+
+
+// Пошук HTML елементу за допомогою querySelector
+
+                
+// За назвою тегу
+// const title = document.querySelector("h1");
+// console.log(title);
+
+// За назвою класу
+
+// const title = document.querySelector(".js-title")
+// console.log(title)
+
+// За ID
+// const title = document.querySelector("#title")
+// console.log(title)
+
+// const title = document.getElementById("title")
+// console.log(title)
+
+// const title = document.getElementsByClassName("js-title")
+// console.log(title)
+
+
+
+
+// Пошук HTML елементів за допомогою querySelectorAll
+
+
+// const items = document.querySelectorAll(".js-items")
+
+// Перетворення колекції до масиву
+
+// console.log(Array.isArray([...items]))
+// console.log(Array.from(items))
+
+
+
+//     <!-- Створення HTML елементів -->
+
+// const list = document.querySelector(".js-list")
+
+// const li = document.createElement("li")
+// const h2 = document.createElement("h2")
+
+// h2.textContent = 'Hello world';
+
+// li.append(h2)
+// list.prepend(li)
+
+// list.insertAdjacentElement("beforeend", li)
+
+// console.log(list)
+
+
+
+
+// Створення HTML елементів за допомогою шаблонної розмітки
+
+// const list = document.querySelector(".js-list")
+
+// const li = '<li>Hello world</li>'
+
+// Метод insertAdjacentHTML
+
+// list.insertAdjacentHTML("beforeend", li)
+// console.log(list)
+
+
+// Властивість innerHTML - затирає попередні данні
+
+// list.innerHTML += li;
+// console.log(list)
+
+
+
+
+
+// Стилізація за допомогою властивості Style
+
+// const list = document.querySelector(".js-list")
+
+// list.style.listStyle = "none"
+// list.style.color = "red"
+// list.style.fontSize = "20px"
+
+
+
+
+// Стилізація за допомогою властивості classList
+// Метод add
