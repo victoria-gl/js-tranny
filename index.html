@@ -50,8 +50,23 @@
 
     <!-- // Подія input/blur -->
 
-    <input type="text" class="js-user-name">
+    <!-- <input type="text" class="js-user-name"> -->
 
+    <!-- Практика -->
+    <form action="submit" class="js-form car-search">
+        <div class="car-group">
+            <input type="text" name="query" class="car-input" placeholder="Пошук" autocomplete="off" />
+        </div>
+        <div class="car-group">
+            <select name="options" class="car-select">
+                <option value="car">Марка</option>
+                <option value="type">Модель</option>
+            </select>
+        </div>
+        <button class="car-button">Пошук</button>
+    </form>
+
+    <ul class="js-list car-list"></ul>
 
 
     <script src="./tranny.js"></script>
