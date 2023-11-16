@@ -1233,4 +1233,211 @@
 
 
 // Стилізація за допомогою властивості classList
+
 // Метод add
+
+// const list = document.querySelector(".js-list")
+
+// list.classList.add("list")
+
+
+// Метод remove
+
+// list.classList.remove("list")
+
+// Метод toggle
+
+// list.classList.toggle("list")
+
+
+
+
+
+// Системні атрибути 
+
+// const btn = document.querySelector(".js-btn")
+
+// btn.hidden = true;
+// btn.hidden = false;
+
+// btn.disabled = true;
+// btn.disabled = false;
+
+
+// Методи для роботи з атрибутами
+// btn.setAttribute("hidden", true)
+// btn.removeAttribute("hidden")
+// console.log(btn.getAttribute("class"))
+
+
+
+
+
+// Дата атрибути (кастомні атрибути, які ми задаємо самостійно)
+
+// const btn = document.querySelector(".js-btn")
+
+// btn.setAttribute("data-btn", 1)
+// btn.setAttribute("data-btn-name", 2)
+// // console.log(btn.dataset)
+
+// const { button, btnName } = btn.dataset
+
+// console.log("button", button);
+// console.log("btnName", btnName);
+
+
+
+// Завдання 
+
+// Потрібно створити розмітку з картками автомобілів.
+// Для створення потрібно зробити масив cars.
+
+// Варіант-1
+// Створи розмітку використовуючи метод createElement
+
+// Варіант-2
+// Створи розмітку використовуючи приклад шаблонної розмітки
+
+// const cars = [
+//   {
+//     id: 1,
+//     model: "Honda",
+//     type: "Civic",
+//     price: 12000,
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTCOHzdE-dK6WK7ax8NzQolTcCWA_jhJD-CRGWfqKJIJuGs8ML_-OyiDwzsdC8jOi_K10&usqp=CAU",
+//   },
+//   {
+//     id: 2,
+//     model: "Audi",
+//     type: "Q7",
+//     price: 40000,
+//     img: "https://upload.wikimedia.org/wikipedia/commons/8/8b/2017_Audi_Q7_S_Line_Quattro_3.0_Front.jpg",
+//   },
+//   {
+//     id: 3,
+//     model: "BMW",
+//     type: "5 series",
+//     price: 9000,
+//     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
+//   },
+//   {
+//     id: 4,
+//     model: "Honda",
+//     type: "Accord",
+//     price: 20000,
+//     img: "https://upload.wikimedia.org/wikipedia/commons/7/76/2021_Honda_Accord_Sport_%28facelift%29%2C_front_11.30.21.jpg",
+//         },
+//    {
+//     id: 5,
+//     model: "Volvo",
+//     type: "XC60",
+//     price: 7000,
+//     img: "https://www.volvocars.com/media/shared-assets/master/images/pages/my19/xc60-my19/accessories/xc60my19_accessories_exteriorfeature2_1.jpg?w=320",
+//   },
+// ];
+
+// Варіант 1 
+
+// const list = document.querySelector(".js-list")
+
+// function createMarkup(arr){
+//         const markup = arr.map(({ id, model, type, price, img }) => {
+//         const li = document.createElement("li")
+//                 const imgEl = document.createElement("img");
+//                 const h2 = document.createElement("h2");
+//                 const h3 = document.createElement("h3");
+//                 const span = document.createElement("span");
+
+//                 li.setAttribute("data-car-id", id)
+
+//                 imgEl.src = img;
+//                 imgEl.alt = type;
+//                 imgEl.style.width = "300px";
+
+
+//                 h2.textContent = model;
+//                 h3.textContent = type;
+//                 span.textContent = price;
+
+//                 li.append(imgEl, h2, h3, span)
+
+//                 return li;
+//         });
+
+//         // console.log(markup);
+//         list.append(...markup)
+// }
+
+// createMarkup(cars)
+
+// Варіант 2 
+
+// const list = document.querySelector(".js-list")
+
+// function createMarkup(arr) {
+//         const markup = arr.map(({ id, model, price, type, img }) => `
+//         <li data-car-id="${id}">
+//         <img src="${img}" alt="${type}" width="300"/>
+//         <h2>${model}</h2>
+//         <h3>${type}</h3>
+//         <span>${price}</span>
+//         </li>
+//         `).join("")
+// // console.log(markup)
+//  list.insertAdjacentHTML("beforeend", markup)
+// }
+
+// createMarkup(cars)
+
+
+
+
+
+                        // Урок 6.2
+
+
+// Подія click
+
+// const btn = document.querySelector(".js-click")
+// const box = document.querySelector(".js-box")
+
+// btn.addEventListener("click", handleClick)
+// box.addEventListener("click", handleClick)
+
+// let step = 0;
+// function handleClick() {
+//         // console.log("ok")
+//         step += 50;
+//         box.style.marginTop = `${step}px`;
+//          box.style.marginLeft = `${step}px`;
+// }
+
+
+// Подія input
+
+// const userName = document.querySelector(".js-user-name")
+
+// userName.addEventListener("input", handleInput)
+
+// function handleInput(event) {
+//         console.log(event.target.value);
+
+// }
+
+
+// Подія Blur
+
+// const userName = document.querySelector(".js-user-name")
+
+// userName.addEventListener("blur", handleBlur)
+
+// function handleBlur(event) {
+//         const name = event.currentTarget.value;
+
+//         alert(`Hello ${name}`)
+// }
+
+
+// Подія submit
+
