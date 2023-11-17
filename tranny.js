@@ -1131,17 +1131,19 @@
 
                 // Деструктуризація масива
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-const first = arr[0];
-const second = arr[1];
-console.log(first);
-console.log(second);
+// const first = arr[0];
+// const second = arr[1];
+// console.log(first);
+// console.log(second);
+
+// const [first, , third] = arr;
+// console.log()
 
 
-                
 
-                // Деструктуризація обʼєктів 
+                // Деструктуризація обʼєктів
 
 // const user = {
 //         name: "Test name",
@@ -1149,24 +1151,127 @@ console.log(second);
 //                 html: true,
 //                 css: false,
 //                 js: true
-//         }
+//         },
+//         age: 25
 // }
 
 // console.log(user);
 
+// const { name, skills, age } = user;
+// console.log("name", name);
+// console.log("skills", skills);
+// console.log("age", age);
 
 
-                //  Глибока деструктуризація обʼєкта 
+
+                //  Глибока деструктуризація обʼєкта
 
 
 // const user = {
-//         name = "Test name";
+//         name: "Test name",
 //         skills: {
 //                 html: true,
 //                 css: false,
 //                 js: true
-//         }
+//         },
+//         any: ["hope", "done", "more"]
 // }
+
+// const { skills: { html, css, js } } = user;
+// console.log(html);
+// console.log(css);
+// console.log(js);
+
+// const { any: [first, second, third] } = user;
+// console.log(first);
+// console.log(second);
+// console.log(third);
+
+               //   деструктуризація обʼєкта в параметрах функції
+
+// const user = {
+//         name: "Test name",
+//         skills: {
+//                 html: true,
+//                 css: false,
+//                 js: true
+//         },
+//         any: ["hope", "done", "more"]
+// }
+
+                //   Без деструктуризації
+
+// function getUserName(obj) {
+//          console.log(`Hello my name is ${obj.name}, I know html - ${obj.skills.html}`)
+//  }
+
+//  getUserName(user)
+
+           //   З деструктуризацією
+
+// function getUserName({ name, skills: { html } }) {
+//          console.log(`Hello my name is ${name}, I know html - ${html}`)
+// }
+ 
+//  getUserName(user)
+
+
+
+
+               //   деструктуризація обʼєкта в циклі
+
+// const users = [{ name: "Kate" }, { name: "Alex" }, { name: "Mark" }];
+
+
+//    Без деструктуризації
+
+// const names = [];
+
+// for (const user of users) {
+//         names.push(user.name)
+// }
+
+// console.log(names)
+
+
+//    з деструктуризацією
+
+
+// 1)
+// const names = [];
+
+// for (const {name} of users) {
+//         names.push(name)
+// }
+
+// console.log(names)
+
+
+// 2)
+// const names = [];
+
+// for (const user of users) {
+//         const { name } = user;
+//         names.push(name)
+// }
+
+// console.log(names)
+
+
+                    // Операція rest та spread 
+ 
+// const numbers = [1, 2, 3];
+// const copy = [...numbers]; //spread - це ... (розгортає старий масив, бере данні і складає в новий масив)
+
+
+
+const numbers = [1, 2, 3];
+const [first, ...args] = numbers; //rest - збирає данні, які залишилися в новий масив
+console.log(args)
+
+
+
+
 
 
 
