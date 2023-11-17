@@ -1124,13 +1124,54 @@
 
 
 
-
                 //      Урок 3.2
 
 
 
 
+                // Деструктуризація масива
+
+const arr = [1, 2, 3, 4, 5];
+
+const first = arr[0];
+const second = arr[1];
+console.log(first);
+console.log(second);
+
+
                 
+
+                // Деструктуризація обʼєктів 
+
+// const user = {
+//         name: "Test name",
+//         skills: {
+//                 html: true,
+//                 css: false,
+//                 js: true
+//         }
+// }
+
+// console.log(user);
+
+
+
+                //  Глибока деструктуризація обʼєкта 
+
+
+// const user = {
+//         name = "Test name";
+//         skills: {
+//                 html: true,
+//                 css: false,
+//                 js: true
+//         }
+// }
+
+
+
+
+
 
                 // Урок 6.1
 
