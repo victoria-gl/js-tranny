@@ -1983,5 +1983,64 @@
 
 
                     // Делегування подій
+//Отримай колір квадратика, по яку було здійснено клік
+
+
+// Приклад без делегування 
+
+//  const container = document.querySelector(".js-container");
+
+//  [...container.children].forEach(item => {
+//        item.addEventListener("click", handleClick) 
+// })
+
+
+// function handleClick(event) {
+//         const color = event.currentTarget.dataset.color;
+//         console.log(color);
+// }
+
+
+// Приклад з делегуванням
+
+// const container = document.querySelector(".js-container");
+
+// container.addEventListener("click", handleClick)
+
+// function handleClick(event) {
+//         if (event.target === event.currentTarget) {
+//                 return;
+//         }
+//         // console.log("currentTarget", event.currentTarget);
+//         // console.log("target", event.target);
+        
+//         if (!event.target.classList.contains("js-box")) {
+//                 return;
+//         }
+
+//         const color = event.target.dataset.color;
+//         console.log(color);
+// };
+
+
+
+//StopPropagation 
+
+const red = document.querySelector(".box-red")
+const green = document.querySelector(".box-green")
+const black = document.querySelector(".box-black")
+
+red.addEventListener("click", handleClick)
+// green.addEventListener("click", handleClick)
+// black.addEventListener("click", handleClick)
+
+function handleClick(event) {
+        
+}
+
+
+
+
+
 
 
