@@ -1963,4 +1963,25 @@
                         //        Урок 7.1
 
 
+// const container = document.querySelector(".js-container");
+// // console.log(container);
+
+
+// [...container.childNodes].forEach(item => {
+// //        console.log(item) 
+// })
+
+
+//Приклад стилізацію одночасно усіх елементів з дз
+
+// const h2 = document.querySelectorAll("h2")
+
+// h2.forEach(item => {
+//         item.style.color = "red";
+// });
+
+
+
+                    // Делегування подій
+
 
