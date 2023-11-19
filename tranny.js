@@ -1344,8 +1344,6 @@
 
 
 
-
-
 // Task - 1 - Деструктуризація
 // Деструктуризуй об'єкт таким чином щоб отримати 
 // значення name, 
@@ -1501,6 +1499,8 @@
 
 // const perimeter = calculateHousePerimeter(house);
 // console.log(`Периметр будинку: ${perimeter}`);
+
+
 
 
 
@@ -1955,3 +1955,12 @@
 //         )
 //   container.innerHTML = createMarkup(result)
 // }
+
+
+
+
+
+                        //        Урок 7.1
+
+
+
