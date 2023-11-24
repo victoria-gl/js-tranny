@@ -2320,4 +2320,27 @@
 
                 //        Урок 8.1
 
+// Уявимо, що ми створили додаткову папку "helpers" і саме туди ми складаємо усі наші функції
 
+// import { logger as log, foo, add } from "./helpers/helpers";
+// import * as esm from "./helpers/helpers";
+// import { logger, foo } from "./helpers/helpers";
+// import { logger, foo, add, num } from "./helpers/helpers";
+// import { hello } from "./services/services";
+// import { say } from "./services/hook";
+
+// function logger() {
+//     console.log("hi");
+// }
+
+// console.log(add(1, 2));
+// logger();
+// foo();
+
+// console.log("num", num);
+
+// hello("Dima")
+// say()
+
+// import add from "./helpers/helpers";
+// console.log(add(1, 2));
