@@ -2322,12 +2322,19 @@
 
 // Уявимо, що ми створили додаткову папку "helpers" і саме туди ми складаємо усі наші функції
 
+// import add from "./helpers/helpers"; - дефолтний
+// console.log(add(1, 2));
+
+// import { logger, foo } from "./helpers/helpers"; - іменований
+// import add, { logger, foo, num } from "./helpers/helpers"; дефолтний + іменований
+
+
 // import { logger as log, foo, add } from "./helpers/helpers";
 // import * as esm from "./helpers/helpers";
-// import { logger, foo } from "./helpers/helpers";
-// import { logger, foo, add, num } from "./helpers/helpers";
+
 // import { hello } from "./services/services";
 // import { say } from "./services/hook";
+
 
 // function logger() {
 //     console.log("hi");
@@ -2342,5 +2349,4 @@
 // hello("Dima")
 // say()
 
-// import add from "./helpers/helpers";
-// console.log(add(1, 2));
+
