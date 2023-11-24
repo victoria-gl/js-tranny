@@ -2328,13 +2328,8 @@
 // import { logger, foo } from "./helpers/helpers"; - іменований
 // import add, { logger, foo, num } from "./helpers/helpers"; дефолтний + іменований
 
-
-// import { logger as log, foo, add } from "./helpers/helpers";
-// import * as esm from "./helpers/helpers";
-
-// import { hello } from "./services/services";
-// import { say } from "./services/hook";
-
+// import { logger as log, foo, add } from "./helpers/helpers"; -у разі, якщо функції повторюються
+// і треба змінити назву
 
 // function logger() {
 //     console.log("hi");
@@ -2344,9 +2339,15 @@
 // logger();
 // foo();
 
-// console.log("num", num);
 
-// hello("Dima")
-// say()
+// import * as esm from "./helpers/helpers"; - для того, щоб імпортувати усе
+
+// console.log(esm.add(1, 2));
+// esm.logger();
+// esm.foo();
+
+
+
+                        //   Урок 8.2
 
 
